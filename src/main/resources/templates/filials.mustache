@@ -1,0 +1,20 @@
+<html>
+
+<body>
+{{#bank}}
+    <b>{{csname}}</b>
+{{/bank}}
+<table  border="1" cellpadding="5" style="border-collapse: collapse; border:1px solid black">
+    {{#filials}}
+        <tr>
+            <td>{{cid}}</td>
+            <td><b>{{cname}}</b></td>
+            <td><i>{{cregnum}}</i></td>
+
+            <td><i>{{address}}</i></td>
+            <td><i>{{rbase.cb_date}}</i></td>
+        </tr>
+    {{/filials}}
+</table>
+</body>
+</html>

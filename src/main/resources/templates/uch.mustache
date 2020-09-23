@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+{{#bank}}
+    <h3>Рег. №: {{cregnum}}
+    <h3>
+        <h2>{{cnamer}}</h2>
+
+{{/bank}}
+    <table border="1" cellpadding="5" style="border-collapse: collapse; border:1px solid black">
+
+
+        <tr>
+            <td colspan="3" align="center" style=" color: blue"><b>Список участников/учредителей КО (полный)</b></td>
+        </tr>
+        <tr>
+            <td><b>№ макета</b></td>
+            <td><b>Дата принятия</b></td>
+            <td><b>Дата присылки</b></td>
+        </tr>
+        {{#uch}}
+            <tr>
+                <td><b>{{CMAKET}}</b></td>
+                <td><b>{{DT_PRIN}}</b></td>
+                <td><b>{{CB_DATE}}</b></td>
+            </tr>
+        {{/uch}}
+    </table>
+
+</body>
+</html>
+
+

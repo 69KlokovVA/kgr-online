@@ -1,0 +1,144 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+<table border="1" cellpadding="5" style="border-collapse: collapse; border:1px solid black">
+    {{#bank}}
+        <tr>
+            <td colspan="4" align="center" style=" color: blue"><b>Справочная информация о кредитной организации</b>
+            </td>
+        </tr>
+        <tr>
+            <td style=" color: blue">Полное фирменное наименование</td>
+            <td><b>{{cname}}</b></td>
+            <td style="color: blue">Сокращенное фирменное наименование</td>
+            <td><b>{{csname}}</b></td>
+        </tr>
+        <tr>
+            <td style="color: blue">Информация о регистрации</td>
+            <td colspan="3">
+                <div align="center">Кредитная организация зарегистрирована <b>{{cdHreg}}</b></div>
+                <div align="center">Регистрационный номер Банка Росии <b>{{cregnum}}</b></div>
+                <div align="center">Внесена запись в ЕГРЮЛ о регистрации юридического лица <b>{{cdreg15}}</b></div>
+                <div align="center">ОГРН <b>{{cregnum15}}</b></div>
+                <div align="center">ИНН <b>{{inn}} {{innDate}}</b></div>
+            </td>
+        </tr>
+    {{/bank}}
+    <tr>
+        <td style="color: blue">Информация об уставе</td>
+        <td colspan="3">
+            {{#ustav}}
+                <div>
+                    <span>{{CCHNGE_N}}</span>
+                    <span>{{CSOGL_D}}</span>
+                    {{#CREASON}}
+                        <span>{{CREASON}}</span>
+                    {{/CREASON}}
+                    {{^CREASON}}
+                        <span>-</span>
+                    {{/CREASON}}
+
+                    <span>{{CCHNGE_D15}}</span>
+                    <span>{{CCHNGE_N15}}</span>
+
+                </div>
+            {{/ustav}}
+        </td>
+    </tr>
+    <tr>
+        <td style=" color: blue">Адрес из устава</td>
+        <td><b>{{addrUst}}</b></td>
+        <td style="color: blue">Фактический адрес</td>
+        <td><b>{{addrFact}}</b></td>
+    </tr>
+    <tr>
+        <td style=" color: blue">ТУ ЦБ РФ</td>
+        <td><b>{{RegionName}}</b></td>
+        <td style="color: blue">Телефоны КО</td>
+        <td><b>{{Phones}}</b></td>
+    </tr>
+    {{#persons}}
+    <tr>
+        <td style=" color: blue">Единоличный исполнительный орган</td>
+        <td><b>{{Predsedatel}}</b> (согласование в ТУ - <b>{{DateSoglPred}}</b> )</td>
+        <td style="color: blue">Главный бухгалтер</td>
+        <td><b>{{GlavBuh}} (согласование в ТУ - {{DateSoglGBuh}} )</b></td>
+    </tr>
+    <tr>
+        <td style=" color: blue">ВРИО ЕИО</td>
+        <td><b>{{vrioeio}}</b></td>
+        <td style="color: blue">ВРИО Главного бухгалтера</td>
+        <td><b>{{vriogbuh}}</b></td>
+    </tr>
+    <tr>
+        <td style=" color: blue">Зам. единоличного исполнительного органа</td>
+        <td>{{zampreds}}</td>
+        <td style="color: blue">Зам. Главного бухгалтера</td>
+        <td>{{zamgbuhs}}</td>
+    </tr>
+    <tr>
+        <td style="color: blue">Члены коллегиального исполнительного органа</td>
+        <td colspan="3">
+            <div>
+                <span>{{pravl}}</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td style="color: blue">Председатель/Члены Совета директоров</td>
+        <td colspan="3">
+            <div>
+                <span><b>{{predSovet}}</b> (дата избрания - <b>{{in_date}}</b>) / {{fioSovet}}</span>
+            </div>
+        </td>
+    </tr>
+    {{/persons}}
+    <tr>
+        <td style="color: blue">Величина зарегистрированного уставного капитала, тыс.руб.</td>
+        <td colspan="3">
+            <div>
+                <span><b>{{UstCapital}}</b>, дата изменения величины УК: <b>{{DateCapital}}</b></span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td style="color: blue">Подразделения КО</td>
+        <td colspan="3">
+            <b>филиалов:</b> в РФ - {{CountFilRF}}; за рубежом - {{CountFilFor}};
+            <b> представительств:</b> в РФ - {{CountPredRF}}; за рубежом - {{CountPredFor}};
+            <b> дополнительных офисов -</b> {{CountDopOf}};
+            <b> операционных касс вне кассового узла - </b>{{CountOperKass}};
+            <b> кредитно-кассовых офисов -</b> {{CountKKO}};
+            <b> операционных офисов -</b> {{CountOPO}};
+            <b> передвижных пунктов кассовых операций -</b> {{CountPPKO}}.
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4" align="center" style=" color: blue"><b>Информация из реестра выданных лицензий</b>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="left" rowspan="2">
+            {{#licen}}
+                <p>{{cabrv}} {{min_cdatep}} {{max_cdatep}}</p>
+            {{/licen}}
+        </td>
+        <td colspan="2" align="center" style=" color: blue">Дополнительная информация по лицензии</td>
+    </tr>
+    <tr>
+        <td align="center" colspan="2">{{LicType}}</td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center" style=" color: blue">Участие в системе страхования вкладов</td>
+        <td colspan="2" align="center">{{Strah}}</td>
+    </tr>
+</table>
+</body>
+</html>
+
+
+
+
+

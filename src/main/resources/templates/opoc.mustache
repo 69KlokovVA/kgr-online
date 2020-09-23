@@ -1,0 +1,32 @@
+<html>
+<body>
+<h2>
+    Кредитная организация: {{bank.cname}}
+</h2>
+<h3>Перечень действующих операционных касс кредитной организации и ее филиалов</h3>
+
+
+<table border="1" cellpadding="5" style="border-collapse: collapse; border:1px solid black">
+    <tr>
+        <td align="center" style=" color: blue"><b>№ п.п.</b></td>
+        <td align="center" style=" color: blue"><b>Наименование доп. офиса</b></td>
+        <td align="center" style=" color: blue"><b>Принадлежность</b></td>
+        <td align="center" style=" color: blue"><b>Дата открытия</b></td>
+        <td align="center" style=" color: blue"><b>Адрес</b></td>
+    </tr>
+    {{#opocs}}
+        <tr>
+            <td>{{rownum}}</td>
+            <td>{{cname}}</td>
+            <td>{{prinad}}</td>
+            <td>{{cn_date}}</td>
+            <td>{{caddr}}</td>
+        </tr>
+    {{/opocs}}
+</table>
+</body>
+</html>
+
+
+
+

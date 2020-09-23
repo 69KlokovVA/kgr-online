@@ -1,0 +1,27 @@
+<html>
+<head> <meta charset="utf-8"></head>
+<body>
+<form action="main" method="post">
+    <div><label> Рег. № : <input type="text" name="cregnum"/> </label></div>
+
+
+    <br><input type="radio" name="select" value="KO_Info" checked> Справка по кредитной организации
+    <br><input type="radio" name="select" value="SD_info"> Совет директоров
+    <br><input type="radio" name="select" value="SD_info_h"> Совет директоров (с учетом истории)
+    <br><input type="radio" name="select" value="Uch"> Участники кредитной организации (<b>поступившие списки</b>)<br>
+    <font color="red">«Комментарий 1: «Раздел включает как полные списки, так и списки на квартальную дату (или на дату
+        изменения списков для ООО) с составом участников, доля которых в уставном капитале кредитной организации свыше
+        1% (при наличии в составе таких участников).»</font>
+    <br><input type="radio" name="select" value="Uch1"> Участники кредитной организации (имеющие долю <b>свыше 1%</b>, а также кредитные  организации и иностранные участники)<br>
+    <font color="red">«Комментарий 2: «Вычисляются на основе поступивших списков с учетом Комментария 1»</font>
+    <br><input type="radio" name="select" value="Filials"> Филиалы кредитной организации
+    <br><input type="radio" name="select" value="DopOf"> Открытые дополнительные офисы кредитной организации и ее филиалов
+    <br><input type="radio" name="select" value="Predst"> Открытые представительства кредитной организации
+    <br><input type="radio" name="select" value="OperKass"> Открытые операционные кассы кредитной организации и ее филиалов
+    <br><input type="radio" name="select" value="KredKass"> Открытые кредитно-кассовые офисы кредитной организации и ее филиалов
+    <br><input type="radio" name="select" value="OperOff"> Открытые операционные офисы
+    <br><br><input type="submit" value="Просмотр">
+</form>
+
+</body>
+</html>

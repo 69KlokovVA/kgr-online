@@ -1,0 +1,40 @@
+<html>
+<body>
+<h2>
+    <br>Действующий состав Совета директоров кредитной организации:
+    {{#bank}}
+    <br>{{cnamer}}
+    <br>Рег. № {{cregnum}}
+    {{/bank}}
+</h2>
+<table border="1" cellpadding="5" style="border-collapse: collapse; border:1px solid black">
+    <tr>
+        <td align="center" style=" color: blue"><b>Должность в совете</b></td>
+        <td align="center" style=" color: blue"><b>Ф.И.О.</b></td>
+        <td align="center" style=" color: blue"><b>Представляет организацию</b></td>
+        <td align="center" style=" color: blue"><b>Должность</b></td>
+        <td align="center" style=" color: blue"><b>Адрес</b></td>
+        <td align="center" style=" color: blue"><b>Телефон</b></td>
+        <td align="center" style=" color: blue"><b>Избрание на должность</b></td>
+        <td align="center" style=" color: blue"><b>Дата последнего переизбрания</b></td>
+    </tr>
+    {{#sdlist}}
+        <tr>
+            <td>{{PRIS_DECODE}}</td>
+            <td>{{CFULLNAME}}</td>
+            <td>{{MESTO}}</td>
+            <td>{{DOLJN}}</td>
+            <td>{{ADRES}}</td>
+            <td>{{TELEFON}}</td>
+            <td>{{IN_DATE}}</td>
+            <td>{{PEREIZ_DATE}}</td>
+        </tr>
+    {{/sdlist}}
+</table>
+</body>
+</html>
+
+
+
+
+

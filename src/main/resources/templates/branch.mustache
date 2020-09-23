@@ -1,0 +1,38 @@
+<html>
+<body>
+<table>
+{{#bank}}
+        <tr><td>Регистрационный номер: </td><td>{{cregnum}}</td></tr>
+        <tr><td>Наименование:</td><td><h2>{{cname}}</h2></td></tr>
+
+{{/bank}}
+{{#branches}}
+        <tr><td>Всего филиалов:</td><td>{{quantity}}</td></tr>
+        <tr><td>Свободный номер:</td><td>{{freenum}}</td></tr>
+        <tr><td>Фактический адрес КО:</td><td>{{addr}}</td></tr>
+        <tr><td>Руководитель:</td><td>{{chief}}</td></tr>
+    </table>
+    <table border="1" cellpadding="5" style="border-collapse: collapse; border:1px solid black">
+        <tr  style="color: blue">
+            <td align="center">Наименование филиала</td>
+            <td align="center">№ филиала</td>
+            <td align="center">Фактический адрес</td>
+            <td align="center">Ф.И.О. руководителя</td>
+            <td align="center">Дата регистрации</td>
+
+        </tr>
+        {{#branches.branch}}
+            <tr>
+                <td>{{cname}}</td>
+                <td>{{cregnum}}</td>
+                <td>{{caddr}}</td>
+                <td>{{predsedatel}}</td>
+                <td>{{cb_date}}</td>
+            </tr>
+        {{/branches.branch}}
+    </table>
+{{/branches}}
+</body>
+</html>
+
+

@@ -1,0 +1,32 @@
+<html>
+<body>
+<h2>
+    <br>Совет директоров кредитной организации:
+    {{#bank}}
+    <br>{{cnamer}}
+    <br>Рег. № {{cregnum}}
+    {{/bank}}
+</h2>
+<table border="1" cellpadding="5" style="border-collapse: collapse; border:1px solid black">
+    <tr>
+        <td align="center" style=" color: blue"><b>Ф.И.О.</b></td>
+        <td align="center" style=" color: blue"><b>Должность в совете</b></td>
+        <td align="center" style=" color: blue"><b>Избрание на должность</b></td>
+        <td align="center" style=" color: blue"><b>Освобождение от должности</b></td>
+    </tr>
+    {{#sdlist}}
+        <tr>
+            <td>{{CFULLNAME}}</td>
+            <td>{{PRIZ_DECODE}}</td>
+            <td>{{IN_DATE}}</td>
+            <td>{{OUT_DATE}}</td>
+        </tr>
+    {{/sdlist}}
+</table>
+</body>
+</html>
+
+
+
+
+
