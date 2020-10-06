@@ -73,6 +73,12 @@
             </exclusions>
         </dependency>
     </dependencies>
+    <repositories>
+        <repository>
+            <id>basilio.lib1</id>
+            <url>/lib</url>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
@@ -81,8 +87,6 @@
     </build>
 
 </project>
-
-
 
 
         <!--
