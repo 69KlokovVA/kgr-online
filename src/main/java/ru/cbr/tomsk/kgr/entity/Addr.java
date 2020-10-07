@@ -16,11 +16,6 @@ public class Addr {
     private Integer ccode;
     private String ce_date;
 
-
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "ccode", referencedColumnName = "caddrmn", insertable = false, updatable = false)
-    RBase rbaseaddr;
-
     public Addr() {
     }
 

@@ -24,13 +24,6 @@ public class RBase implements Serializable {
     private Integer curaddr;
     private Integer caddrmn;
 
-
-
-    @OneToMany(mappedBy = "rbaseaddr")
-    @Fetch(value = FetchMode.SUBSELECT)
-    List<Addr> addrList;
-
-
     public RBase() {
     }
 }
